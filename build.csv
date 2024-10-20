@@ -1,2 +1,2 @@
-./src/Core/Classes/CList.c,CList,Core
-./src/Core/Classes/CApplication.c,CApplication,Core
+./src/Core/Classes/RList.c,RList,Core
+./src/Core/Classes/RApplication.c,RApplication,Core

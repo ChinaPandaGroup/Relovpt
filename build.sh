@@ -4,6 +4,10 @@
 # Loading configuration
 source ./Makefile.conf
 
+# Clear old file ...
+rm -rf $BUILD_DIR
+mkdir $BUILD_DIR
+mkdir $ERROR_LOG_PATH
 
 # This is Variable
 progress=0
@@ -43,9 +47,13 @@ warningList=( )
 
 while read line
 do
+
     path=$(cut -d ',' -f 1 <<< $line)
     targetname=$(cut -d ',' -f 2 <<< $line)
     buildpath=$(cut -d ',' -f 3 <<< $line)
+    if [ ! -d  $BUILD_DIR/$buildpath ];then
+        mkdir $BUILD_DIR/$buildpath
+    fi
     $COMPILE -o $BUILD_DIR/$buildpath/$targetname$TYPE $path $OPTIONS &> $ERROR_LOG_PATH/$targetname.log
     if [ -s $ERROR_LOG_PATH/$targetname.log ];
     then
