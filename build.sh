@@ -1,6 +1,8 @@
 #!/bin/bash
 # Build Script
 
+# Warning: You cannot have a blank line in build.csv
+
 # Loading configuration
 source ./Makefile.conf
 
@@ -21,7 +23,7 @@ function GetFileLine(){
 function addProgress(){
 
     printf "\r"
-    printf "Progress: |"
+    printf "Progress: ["
     progress=$(expr  $progress + 1)
     for((tmp=1; $tmp < $progress; tmp++))
     do
@@ -32,7 +34,7 @@ function addProgress(){
     do
         printf " "
     done
-    printf "| %d%%" $(expr $progress \* 100 / $allProgress)
+    printf "] %d%%" $(expr $progress \* 100 / $allProgress)
 }
 
 # Check the verification file and startup parameters
