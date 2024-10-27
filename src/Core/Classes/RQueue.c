@@ -11,14 +11,18 @@
 ////////////////////////////////////////////////
 #include "../../Sdk/RTypes.h" // include header
 ////////////////////////////////////////////////
+// is function Define
 struct _RQueueNode{
 
 };
 struct RQueue{
     LENGE_T length;
     struct _RQueueNode *head, *tail; // is head and tail
+    void (*GetLength)(struct RQueue *) ;
 };
-
+void GetLength(struct RQueue *queue){
+    
+}
 
 #else
 #endif
