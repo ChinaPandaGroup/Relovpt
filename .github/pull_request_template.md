@@ -1,19 +1,19 @@
 # Pull Request 
 ## Update 
 ### Code
-[  ] Update a `Zero-day vulnexrability`
+- [ ] Update a `Zero-day vulnexrability`
 
-[  ] Added a new feature
+- [ ] Added a new feature
 
-[  ] Refactor the code
+- [ ] Refactor the code
 
 ### Document
 
-[  ] Change Error
+- [ ] Change Error
 
-[  ] Added Change Log
+- [ ] Added Change Log
 
-[  ] Make the document easier to understand
+- [ ] Make the document easier to understand
 
 ## Other
 
